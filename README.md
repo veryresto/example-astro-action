@@ -1,3 +1,5 @@
+reference: https://css-tricks.com/powering-search-with-astro-actions-and-fuse-js/
+
 # Astro Starter Kit: Basics
 
 ```sh

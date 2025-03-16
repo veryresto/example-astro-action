@@ -15,5 +15,24 @@ const bookmarks = await getCollection('bookmarks');
 		<p class="text-xl text-center mb-5">
 			This is only 10 of {bookmarks.length} bookmarks
 		</p>
+		<h2 class="text-2xl mb-3">Latest bookmarks</h2>
+		<ul class="grid gap-4">
+			{
+			  bookmarks.slice(0, 10).map((item) => (
+			  <li>
+				<a
+				  href={item.data?.url}
+				  class="block p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+				  <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+					{item.data?.pageTitle}
+				  </h3>
+				  <p class="font-normal text-gray-700 dark:text-gray-400">
+					{item.data?.description}
+				  </p>
+				</a>
+			  </li>
+			  ))
+			}
+			</ul>
 	</div>
 </Layout>

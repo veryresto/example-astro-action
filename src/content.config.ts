@@ -10,4 +10,4 @@ const bookmarks = ({
     loader: file("src/data/bookmarks.json"),
 });
 
-export const collections = {bookmarks};
+export const collections = { bookmarks };
